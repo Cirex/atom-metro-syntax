@@ -1,0 +1,15 @@
+{
+  "name": "metro-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "Blue based color scheme meant to compliment the default color scheme of Windows 8.x",
+  "repository": "https://github.com/Cirex/atom-metro-syntax",
+  "license": "MIT",
+  "author": {
+    "name": "Benjamin Bloch",
+    "email": "cirex@fenix-novus.com"
+  },
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
