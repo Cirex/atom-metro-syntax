@@ -13,6 +13,10 @@ For the __complete experience__ you can also:
 
 ### Screenshots
 
+LESS:
+
+![LESS Screenshot](http://cirex.github.io/screenshots/metro-syntax.less.png "LESS Screenshot")
+
 Ruby:
 
 ![Ruby Screenshot](http://cirex.github.io/screenshots/metro-syntax.ruby.png "Ruby Screenshot")
