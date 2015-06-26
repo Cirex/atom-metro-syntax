@@ -1,0 +1,143 @@
+.keyword {
+  color: @blue;
+
+  &.unit.css {
+    color: @light-orange;
+  }
+}
+
+.punctuation {
+  &.comment { color: @grey }
+  &.string  { color: @orange }
+  &.tag     { color: @blue }
+
+  &.variable,
+  &.constant {
+    color: @red;
+  }
+
+  &.separator,
+  &.parameters {
+    color: @syntax-text-color;
+  }
+
+  &.string.begin.html,
+  &.string.end.html {
+    color: @light-orange;
+  }
+}
+
+.variable {
+  color: @red;
+  &.parameter {
+    color: @syntax-text-color;
+  }
+
+  &.class.ruby,
+  &.instance.ruby,
+  &.block.ruby {
+    color: @red;
+  }
+
+  &.constant.ruby {
+    color: @purple;
+  }
+}
+
+.entity {
+  color: @syntax-text-color;
+  &.attribute-name {
+    color: @orange;
+
+    &.pseudo-element.css,
+    &.pseudo-class.css,
+    &.class.css,
+    &.id.css {
+      color: @blue;
+    }
+  }
+
+  &.tag {
+    color: @blue;
+
+    &.css,
+    &.script.html {
+      color: @blue;
+    }
+
+    &.doctype {
+      color: @light-grey;
+    }
+  }
+
+  &.inherited-class.ruby {
+    color: @purple;
+  }
+}
+
+.support {
+  color: @purple;
+  &.constant {
+    color: @red;
+  }
+
+  &.font-name.css     { color: @dark-orange }
+  &.property-name.css { color: @orange }
+}
+
+.string {
+  color: @orange;
+
+  .source   { color: @light-orange }
+  .constant { color: @dark-orange }
+  .keyword  { color: @darker-orange }
+
+  &.html {
+    color: @light-orange;
+  }
+
+  &.regexp {
+    color: @orange;
+
+    .character.escape,
+    .source.ruby.embedded,
+    .arbitrary-repetition {
+      color: @dark-orange;
+    }
+  }
+}
+
+.constant {
+  color: @light-red;
+  &.numeric {
+    color: @light-red;
+    &.css {
+      color: @light-orange;
+    }
+  }
+
+  &.rgb-value.css { color: @light-red }
+  &.symbol.ruby   { color: @red }
+}
+
+.storage.type.variable {
+  color: @blue;
+}
+
+.meta {
+  &.property-name.css {
+    color: @orange;
+  }
+
+  &.tag.sgml {
+    color: @light-grey;
+  }
+
+  &.property-value.css {
+    color: @light-orange;
+  }
+}
+
+.comment {
+  color: @grey;
+}

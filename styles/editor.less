@@ -1,0 +1,74 @@
+atom-text-editor,
+:host {
+  background: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .bracket-matcher .region {
+    background: @grey;
+    border-bottom: none;
+    opacity: 1;
+  }
+
+  .lines {
+    .selection .region {
+      background: @syntax-selection-color;
+    }
+
+    .cursor-line {
+      background: @syntax-gutter-background-color-selected;
+    }
+  }
+
+  .find-result {
+    .region {
+      background: darken(@syntax-result-marker-color, 3.5%);
+      border-color: @syntax-result-marker-color;
+    }
+  }
+
+  .current-result {
+    .region {
+      background: darken(@syntax-result-marker-color-selected, 3.5%);
+      border-color: @syntax-result-marker-color-selected;
+    }
+  }
+
+  .gutter {
+    background: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      opacity: 1;
+
+      &.git-line-removed:before {
+        border-width: 6px;
+        margin-top: -6px;
+        bottom: -6px;
+      }
+
+      &.cursor-line {
+        background: @syntax-gutter-background-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+}
