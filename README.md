@@ -1,7 +1,7 @@
 Metro
 ------
 
-Blue based syntax highlighting theme meant to compliment the default color scheme of Windows 8.x
+Blue based syntax highlighting theme meant to complement the default color scheme of Windows 8.x
 
 ### Installation
 
