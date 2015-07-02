@@ -1,7 +1,7 @@
 {
   "name": "metro-syntax",
   "theme": "syntax",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Blue based color scheme meant to complement the default color scheme of Windows",
   "repository": "https://github.com/Cirex/atom-metro-syntax",
   "license": "MIT",
