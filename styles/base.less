@@ -1,34 +1,46 @@
-.keyword {
-  color: @blue;
-
-  &.unit.css {
-    color: @light-orange;
-  }
-}
+// NOTE: Cleanup this monstrosity.
 
 .punctuation {
-  &.comment { color: @grey }
-  &.string  { color: @orange }
-  &.tag     { color: @blue }
+  color: @syntax-text-color;
+
+  &.comment { color: @syntax-grey; }
+  &.string  { color: @syntax-orange; }
+  &.tag     { color: @syntax-blue; }
 
   &.variable,
   &.constant {
-    color: @red;
+    color: @syntax-red;
   }
 
+  &.function,
   &.separator,
-  &.parameters {
+  &.parameters,
+  &.terminator {
     color: @syntax-text-color;
   }
 
-  &.string.begin.html,
-  &.string.end.html {
-    color: @light-orange;
+  &.embedded,
+  &.string.html.begin,
+  &.string.html.end {
+    color: @syntax-light-orange;
+  }
+
+  &.embedded.php {
+    color: @syntax-blue;
+  }
+
+  &.entry.yaml {
+    color: @syntax-blue;
+  }
+
+  &.symbol.ruby.begin,
+  &.symbol.ruby.end {
+    color: @syntax-red;
   }
 }
 
 .variable {
-  color: @red;
+  color: @syntax-red;
   &.parameter {
     color: @syntax-text-color;
   }
@@ -36,108 +48,226 @@
   &.class.ruby,
   &.instance.ruby,
   &.block.ruby {
-    color: @red;
+    color: @syntax-red;
   }
 
   &.constant.ruby {
-    color: @purple;
+    color: @syntax-purple;
   }
 }
 
 .entity {
   color: @syntax-text-color;
   &.attribute-name {
-    color: @orange;
+    color: @syntax-orange;
 
     &.pseudo-element.css,
     &.pseudo-class.css,
-    &.class.css,
-    &.id.css {
-      color: @blue;
+    &.class,
+    &.id {
+      color: @syntax-blue;
     }
   }
 
+  &.css {
+    color: @syntax-blue;
+  }
+
   &.tag {
-    color: @blue;
+    color: @syntax-blue;
+
+    &.reference.scss {
+      color: @syntax-text-color;
+    }
 
     &.css,
     &.script.html {
-      color: @blue;
+      color: @syntax-blue;
     }
 
     &.doctype {
-      color: @light-grey;
+      color: @syntax-light-grey;
     }
   }
 
   &.inherited-class.ruby {
-    color: @purple;
+    color: @syntax-purple;
+  }
+
+  &.entity.module.ruby {
+    color: @syntax-text-color;
+  }
+
+  &.gfm {
+    color: @syntax-orange;
   }
 }
 
 .support {
-  color: @purple;
+  color: @syntax-purple;
   &.constant {
-    color: @red;
+    color: @syntax-red;
+    &.css {
+      color: @syntax-purple;
+      &.media {
+        color: @syntax-red;
+      }
+    }
+
+    &.property-value.css {
+      color: @syntax-red;
+    }
   }
 
-  &.font-name.css     { color: @dark-orange }
-  &.property-name.css { color: @orange }
+  &.font-name.css,
+  &.font-name.scss {
+    color: @syntax-dark-orange;
+  }
+
+  &.property-name.css,
+  &.property-name.scss {
+    color: @syntax-orange;
+  }
 }
 
 .string {
-  color: @orange;
+  color: @syntax-orange;
 
-  .source   { color: @light-orange }
-  .constant { color: @dark-orange }
-  .keyword  { color: @darker-orange }
+  .source   { color: @syntax-light-orange; }
+  .constant { color: @syntax-dark-orange; }
+  .keyword  { color: @syntax-darker-orange; }
 
   &.html {
-    color: @light-orange;
+    color: @syntax-light-orange;
+  }
+
+  &.xml {
+    color: @syntax-light-orange;
   }
 
   &.regexp {
-    color: @orange;
+    color: @syntax-orange;
 
     .character.escape,
     .source.ruby.embedded,
     .arbitrary-repetition {
-      color: @dark-orange;
+      color: @syntax-dark-orange;
     }
   }
 }
 
 .constant {
-  color: @light-red;
+  color: @syntax-light-red;
   &.numeric {
-    color: @light-red;
-    &.css {
-      color: @light-orange;
+    color: @syntax-light-red;
+  }
+
+  &.rgb-value.css { color: @syntax-light-red; }
+  &.symbol.ruby   { color: @syntax-red; }
+}
+
+.storage {
+  &.type.class,
+  &.type.function,
+  &.type.variable {
+    color: @syntax-blue;
+  }
+
+  &.type.note,
+  &.type.todo,
+  &.type.fixme {
+    color: @syntax-light-grey;
+  }
+
+  &.modifier {
+    color: @syntax-blue;
+  }
+
+  &.modifier.java.import,
+  &.modifier.java.package {
+    color: @syntax-orange;
+
+    .separator {
+      color: @syntax-orange;
     }
   }
 
-  &.rgb-value.css { color: @light-red }
-  &.symbol.ruby   { color: @red }
-}
-
-.storage.type.variable {
-  color: @blue;
+  &.annotatation.java {
+    color: @syntax-red;
+  }
 }
 
 .meta {
   &.property-name.css {
-    color: @orange;
+    color: @syntax-orange;
   }
 
   &.tag.sgml {
-    color: @light-grey;
+    color: @syntax-blue;
   }
 
   &.property-value.css {
-    color: @light-orange;
+    color: @syntax-light-orange;
+  }
+
+  &.brace.round {
+    color: @syntax-text-color;
+  }
+
+  &.property-value.scss,
+  &.attribute-selector.scss {
+    .string {
+      color: @syntax-light-orange;
+    }
+  }
+}
+
+.keyword {
+  color: @syntax-blue;
+
+  &.unit.css,
+  &.unit.scss {
+    color: @syntax-light-red;
+  }
+
+  &.operator,
+  &.control.ternary {
+    color: @syntax-text-color;
   }
 }
 
 .comment {
-  color: @grey;
+  color: @syntax-grey;
+
+  &.keyword {
+    color: @syntax-light-grey;
+  }
+}
+
+.markup {
+  &.link,
+  &.http,
+  &.hyperlink {
+    color: @syntax-light-orange;
+  }
+
+  &.underline {
+    text-decoration: underline;
+  }
+
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+
+  &.heading {
+    color: @syntax-blue;
+  }
+
+  &.code .support {
+    color: @syntax-grey;
+  }
 }

@@ -1,34 +1,43 @@
-@blue: #668AD1;
-@light-red: #FF9292;
-@red: #D16060;
-@purple: #9B859D;
-@light-orange: #FFEAB9;
-@dark-orange: #CF7D34;
-@darker-orange: #E36B48;
-@orange: #FFC35A;
-@grey: #767F8C;
-@light-grey: #A6ABB5;
-@green: #4DA941;
+@import "colors";
 
+// General
 @syntax-text-color: #FFF;
 @syntax-cursor-color: #FFF;
-@syntax-background-color: #36383C;
 @syntax-selection-color: darken(@syntax-background-color, 5%);
-@syntax-selection-flash-color: #00F;
+@syntax-selection-flash-color: #00f;
+@syntax-background-color: #36383C;
 
+// Guides
 @syntax-wrap-guide-color: lighten(@syntax-background-color, 8.5%);
 @syntax-indent-guide-color: lighten(@syntax-background-color, 8.5%);
 @syntax-invisible-character-color: lighten(@syntax-background-color, 8.5%);
 
+// Markers
 @syntax-result-marker-color: #555;
 @syntax-result-marker-color-selected: #53586E;
 
+// Gutter
 @syntax-gutter-text-color: lighten(@syntax-background-color, 13.5%);
 @syntax-gutter-text-color-selected: #338EDA;
 @syntax-gutter-background-color: darken(@syntax-background-color, 2.5%);
 @syntax-gutter-background-color-selected: darken(@syntax-background-color, 8.5%);
 
-@syntax-color-renamed: @blue;
-@syntax-color-added: @green;
-@syntax-color-modified: @orange;
-@syntax-color-removed: @red;
+// Git
+@syntax-color-added: @syntax-green;
+@syntax-color-modified: @syntax-orange;
+@syntax-color-removed: @syntax-red;
+@syntax-color-renamed: @syntax-blue;
+
+// Required, but unused
+@syntax-color-variable: @syntax-light-red;
+@syntax-color-constant: @syntax-light-red;
+@syntax-color-property: @syntax-light-red;
+@syntax-color-value: @syntax-light-orange;
+@syntax-color-function: @syntax-purple;
+@syntax-color-method: @syntax-color-function;
+@syntax-color-class: @syntax-darker-orange;
+@syntax-color-keyword: @syntax-blue;
+@syntax-color-tag: @syntax-red;
+@syntax-color-attribute: @syntax-orange;
+@syntax-color-import: @syntax-green;
+@syntax-color-snippet: @syntax-green;
